@@ -1,0 +1,17 @@
+{% extends constant('THEME_NAME')~'/base.twig' %}
+
+{% block header %}
+	{{parent()}}
+	<link rel="stylesheet" href="css/panel.css">
+{% endblock %}
+
+{% block content_page %}
+	{{parent()}}
+	<div class="container">
+
+	{% include('whelper/panel/get.twig') %}
+
+    </div>
+
+    <script src="js/panel.js"></script>
+{% endblock content_page %}

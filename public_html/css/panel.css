@@ -1,0 +1,15 @@
+.form-control{
+	width: 25%;
+	display: inline-block;
+}
+
+.btn-block{
+	width: 25%;
+	display: inline-block;
+}
+
+.menu-option{
+	display: block;
+	width: 25%;
+	margin-top: 0.5em;
+}

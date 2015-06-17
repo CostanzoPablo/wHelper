@@ -1,0 +1,20 @@
+{% extends constant('THEME_NAME')~'/base.twig' %}
+
+{% block header %}
+	{{parent()}}
+	<link rel="stylesheet" href="css/login.css">
+{% endblock %}
+
+{% block content_page %}
+	{{parent()}}
+    <div class="container">
+      <form method="post" class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input name="user" type="text" id="inputUser" class="form-control" placeholder="User name" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-warning btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+{% endblock content_page %}

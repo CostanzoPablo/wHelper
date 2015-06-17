@@ -1,0 +1,44 @@
+<div class="panel panel-warning">
+	<div class="panel-heading">
+		{% if parent is not defined %}
+			<h4 class="panel-title form-signin-heading">Add New Menu Option</h4>
+		{% else %}
+			<h5 class="panel-title form-signin-heading">Add New Sub Menu Option</h5>
+		{% endif %}
+	</div>
+	<div class="panel-body">
+		<form method="post" class="form-signin" action="./panel/new">
+			<label class="sr-only">Title</label>
+			<input name="title" type="text" id="inputTitle" class="form-control" placeholder="Title" required>
+			<input name="text" type="text" id="inputText" class="form-control" placeholder="Text" required>		
+			<input name="parent" type="text" id="inputParent" class="form-control hidden" placeholder="Parent" value="{{parent}}">			
+			<button class="btn btn-lg btn-warning btn-block" type="submit">Create</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h5 class="form-signin-heading">Menu Options</h5>
+		</div>
+		<div class="panel-body">
+			{% for m in menu %}
+				
+				<div>
+					<div class="btn btn-lg btn-warning menu-option continue" onclick="loadChildrens({{m.id}});">{{m.title}}</div>
+					<a href="./panel/delete/{{m.id}}">
+						<span class="glyphicon glyphicon-trash continue cursor" aria-hidden="true"></span>
+					</a>
+				</div>
+
+				<div class="childrens hidden" id="{{m.id}}"></div>
+				{% for s in m.submenu %}
+					<div class="btn btn-lg btn-warning menu-option" id="{{s.id}}">{{s}}</div>
+					<div class="childrens hidden" id="{{s.id}}"></div>
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</div>
