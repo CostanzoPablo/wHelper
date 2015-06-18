@@ -21,6 +21,11 @@ class Menu_model extends CI_Model {
         $this->db->delete('menu'); 
     }
 
+    public function update_menu($id, $title, $text){ 
+        $this->db->where('id', $id);
+        $this->db->update('menu', array('title' => $title, 'text' => $text));
+    }
+
     public function delete_childrens($id){ 
         $this->db->where('parent', $id);
         $this->db->delete('menu'); 

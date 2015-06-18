@@ -70,4 +70,17 @@ class Panel extends CI_Controller {
             redirect('panel');
         }
     }    
+
+    public function edit_menu($id) {
+
+        $this->load->model('user_model');
+        $this->load->model('menu_model');
+
+        if (!$this->session->userdata('user')){
+            $params["error"] = "Not logged in !";
+        }else{
+            $this->menu_model->update_menu($id, $this->input->post('title'), $this->input->post('text'));
+            redirect('panel');
+        }
+    }        
 }

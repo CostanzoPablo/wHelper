@@ -32,6 +32,18 @@
 					<a href="./panel/delete/{{m.id}}">
 						<span class="glyphicon glyphicon-trash continue cursor" aria-hidden="true"></span>
 					</a>
+					<div onclick="openClose('editar_{{m.id}}');" class="continue">
+						<span class="glyphicon glyphicon-pencil continue cursor" aria-hidden="true"></span>
+					</div>					
+				</div>
+
+				<div id="editar_{{m.id}}" class="hidden">
+					<form class="form-signin" method="post" action="./panel/edit/{{m.id}}">
+						<label class="sr-only">Title</label>
+						<input name="title" type="text" id="inputTitle" class="form-control" placeholder="Title" value="{{m.title}}" required>
+						<input name="text" type="text" id="inputText" class="form-control" placeholder="Text" value="{{m.text}}">		
+						<button class="btn btn-lg btn-warning btn-block" type="submit">Edit</button>
+					</form>
 				</div>
 
 				<div class="childrens hidden" id="{{m.id}}"></div>

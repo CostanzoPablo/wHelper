@@ -47,5 +47,6 @@ $route['panel/new'] = 'panel/new_menu';
 $route['panel/get/([0-9]+)'] = 'panel/get/$1';
 $route['panel/get/([0-9]+)/json'] = 'panel/get/$1/1';
 $route['panel/delete/([0-9]+)'] = 'panel/delete_menu/$1';
+$route['panel/edit/([0-9]+)'] = 'panel/edit_menu/$1';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
