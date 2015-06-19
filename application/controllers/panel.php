@@ -24,12 +24,6 @@ class Panel extends CI_Controller {
     public function get_childrens($id){
         $temp_menu = $this->menu_model->get_menu($id);
 
-
-
-
-
-
-
         foreach ($temp_menu as $key => $value) {
             $temp_menu[$key]['childrens'] = $this->get_childrens($value["id"]);
         }
