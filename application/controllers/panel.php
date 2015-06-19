@@ -21,6 +21,23 @@ class Panel extends CI_Controller {
         }
     }
 
+    public function get_childrens($id){
+        $temp_menu = $this->menu_model->get_menu($id);
+
+
+
+
+
+
+
+        foreach ($temp_menu as $key => $value) {
+            $temp_menu[$key]['childrens'] = $this->get_childrens($value["id"]);
+        }
+
+        return $temp_menu;
+    }
+
+
     public function get($id, $json = false) {
 
         $this->load->model('user_model');
@@ -30,10 +47,7 @@ class Panel extends CI_Controller {
             $params["error"] = "Not logged in !";
         }else{
             if ($json){
-                $menu = $this->menu_model->get_menu($id);
-                foreach ($menu as $key => $value) {
-                    $menu[$key]['childrens'] = $this->menu_model->get_menu($value["id"]);
-                }
+                $menu = $this->get_childrens($id);
                 $this->response->json($menu);
             }else{
                 $params["parent"] = $id;
