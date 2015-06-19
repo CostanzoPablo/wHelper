@@ -80,7 +80,7 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
 \t\t\t\t\t</div>\t\t\t\t\t
 \t\t\t\t\t<div class=\"text continue\">";
             // line 37
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "title"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "text"), "html", null, true);
             echo "</div>
 \t\t\t\t</div>
 
