@@ -16,7 +16,7 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"panel panel-warning\">
+        echo "<div class=\"panel panel-warning tree\">
 \t<div class=\"panel-heading\">
 \t\t";
         // line 3
@@ -48,7 +48,7 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
 
 
 
-\t<div class=\"panel panel-warning\">
+\t<div class=\"panel panel-warning tree\">
 \t\t<div class=\"panel-heading\">
 \t\t\t<h5 class=\"form-signin-heading\">Menu Options</h5>
 \t\t</div>
@@ -59,47 +59,46 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
         $context['_seq'] = twig_ensure_traversable((isset($context["menu"]) ? $context["menu"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
             // line 29
-            echo "\t\t\t\t
-\t\t\t\t<div>
+            echo "\t\t\t\t<div>
 \t\t\t\t\t<div class=\"btn btn-lg btn-warning menu-option continue\" onclick=\"loadChildrens(";
-            // line 31
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo ");\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "title"), "html", null, true);
             echo "</div>
 \t\t\t\t\t<a href=\"./panel/delete/";
-            // line 32
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo "\">
 \t\t\t\t\t\t<span class=\"glyphicon glyphicon-trash continue cursor\" aria-hidden=\"true\"></span>
 \t\t\t\t\t</a>
 \t\t\t\t\t<div onclick=\"openClose('editar_";
-            // line 35
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo "');\" class=\"continue\">
 \t\t\t\t\t\t<span class=\"glyphicon glyphicon-pencil continue cursor\" aria-hidden=\"true\"></span>
 \t\t\t\t\t</div>\t\t\t\t\t
 \t\t\t\t\t<div class=\"text continue\">";
-            // line 38
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "title"), "html", null, true);
             echo "</div>
 \t\t\t\t</div>
 
 \t\t\t\t<div id=\"editar_";
-            // line 41
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo "\" class=\"hidden\">
 \t\t\t\t\t<form class=\"form-signin\" method=\"post\" action=\"./panel/edit/";
-            // line 42
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo "\">
 \t\t\t\t\t\t<label class=\"sr-only\">Title</label>
 \t\t\t\t\t\t<input name=\"title\" type=\"text\" id=\"inputTitle\" class=\"form-control\" placeholder=\"Title\" value=\"";
-            // line 44
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "title"), "html", null, true);
             echo "\" required>
 \t\t\t\t\t\t<input name=\"text\" type=\"text\" id=\"inputText\" class=\"form-control\" placeholder=\"Text\" value=\"";
-            // line 45
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "text"), "html", null, true);
             echo "\">\t\t
 \t\t\t\t\t\t<button class=\"btn btn-lg btn-warning btn-block\" type=\"submit\">Edit</button>
@@ -107,22 +106,22 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
 \t\t\t\t</div>
 
 \t\t\t\t<div class=\"childrens hidden\" id=\"";
-            // line 50
+            // line 49
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"), "html", null, true);
             echo "\"></div>
 \t\t\t\t";
-            // line 51
+            // line 50
             $context['_parent'] = (array) $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["m"]) ? $context["m"] : null), "submenu"));
             foreach ($context['_seq'] as $context["_key"] => $context["s"]) {
-                // line 52
+                // line 51
                 echo "\t\t\t\t\t<div class=\"btn btn-lg btn-warning menu-option\" id=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["s"]) ? $context["s"] : null), "id"), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, (isset($context["s"]) ? $context["s"] : null), "html", null, true);
                 echo "</div>
 \t\t\t\t\t<div class=\"childrens hidden\" id=\"";
-                // line 53
+                // line 52
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["s"]) ? $context["s"] : null), "id"), "html", null, true);
                 echo "\"></div>
 \t\t\t\t";
@@ -130,13 +129,13 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['s'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 55
+            // line 54
             echo "\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
+        // line 55
         echo "\t\t</div>
 \t</div>
 ";
@@ -154,6 +153,6 @@ class __TwigTemplate_873fe0983564ec699f46fe82f051c7a20a252ce33ab44b55ee8d66ed566
 
     public function getDebugInfo()
     {
-        return array (  140 => 56,  134 => 55,  126 => 53,  119 => 52,  115 => 51,  111 => 50,  103 => 45,  99 => 44,  94 => 42,  90 => 41,  84 => 38,  78 => 35,  72 => 32,  66 => 31,  62 => 29,  58 => 28,  41 => 14,  33 => 8,  29 => 6,  25 => 4,  23 => 3,  19 => 1,);
+        return array (  139 => 55,  133 => 54,  125 => 52,  118 => 51,  114 => 50,  110 => 49,  102 => 44,  98 => 43,  93 => 41,  89 => 40,  83 => 37,  77 => 34,  71 => 31,  65 => 30,  62 => 29,  58 => 28,  41 => 14,  33 => 8,  29 => 6,  25 => 4,  23 => 3,  19 => 1,);
     }
 }

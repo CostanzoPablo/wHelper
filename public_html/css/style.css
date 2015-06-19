@@ -39,3 +39,9 @@
 .text{
 	font-size: 0.8em;
 }
+
+.tree{
+	width: 90%;
+	margin-left: 10%;
+	margin-top: 1em;
+}

@@ -1,4 +1,4 @@
-<div class="panel panel-warning">
+<div class="panel panel-warning tree">
 	<div class="panel-heading">
 		{% if parent is not defined %}
 			<h4 class="panel-title form-signin-heading">Add New Menu Option</h4>
@@ -20,13 +20,12 @@
 
 
 
-	<div class="panel panel-warning">
+	<div class="panel panel-warning tree">
 		<div class="panel-heading">
 			<h5 class="form-signin-heading">Menu Options</h5>
 		</div>
 		<div class="panel-body">
 			{% for m in menu %}
-				
 				<div>
 					<div class="btn btn-lg btn-warning menu-option continue" onclick="loadChildrens({{m.id}});">{{m.title}}</div>
 					<a href="./panel/delete/{{m.id}}">
