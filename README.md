@@ -6,6 +6,28 @@
 
 	Import to DB wHelper.sql
 
+#Configure Rewrite mod
+	sudo a2enmod rewrite
+	
+	sudo gedit 000-default.conf
+
+	<VirtualHost *:80>
+		ServerAdmin webmaster@localhost
+		DocumentRoot /var/www/html
+
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+		<Directory /var/www/>
+			Options Indexes FollowSymLinks MultiViews
+			AllowOverride All
+			Order allow,deny
+			allow from all
+		</Directory>
+	</VirtualHost>
+
+	sudo service apache2 restart
+	
 #Use
 	http://xxx/whelper/public_html/
 

@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'whelper2';
+$db['default']['username'] = 'wHelper';
 $db['default']['password'] = 'whelper2015whelper';
-$db['default']['database'] = 'whelper';
+$db['default']['database'] = 'wHelper';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
